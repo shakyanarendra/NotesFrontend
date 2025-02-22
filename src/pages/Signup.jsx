@@ -14,6 +14,7 @@ const Signup = () => {
   const [userMobile, setuserMobile] = useState("");
 
   const registerUser = async (e) => {
+    e.preventDefault();
     try {
       const formData = new FormData();
       formData.append("firstName", firstName);
