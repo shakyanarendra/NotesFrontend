@@ -34,6 +34,7 @@ const Login = () => {
         navigate("/login");
       } else {
         dispatch(setUserData(result.data));
+        toast.success(`Welcome back, ${result.data.user.name}!`);
         navigate("/");
       }
     } catch (error) {
