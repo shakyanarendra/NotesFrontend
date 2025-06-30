@@ -210,13 +210,14 @@ const Signup = () => {
           </label>
         </div>
 
-         <button
-          className="rounded-lg bg-blue-500 px-5 py-2 font-bold text-white hover:bg-blue-600 disabled:opacity-60"
-          type="submit"
-          disabled={loading}
-        >
-          {loading ? "Logging in..." : "Log In"}
-        </button>
+        <button
+  className="rounded-lg bg-blue-500 px-5 py-2 font-bold text-white hover:bg-blue-600 disabled:opacity-60"
+  type="submit"
+  disabled={loading}
+>
+  {loading ? "Registering..." : "Register"}
+</button>
+
         <div className="text-sm">
           Already have an account?{" "}
           <Link to="/login" className="font-bold text-blue-500 hover:underline">
