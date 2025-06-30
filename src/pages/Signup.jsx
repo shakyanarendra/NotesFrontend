@@ -12,9 +12,11 @@ const Signup = () => {
   const [userName, setuserName] = useState("");
   const [userPassword, setuserPassword] = useState("");
   const [userMobile, setuserMobile] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const registerUser = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const formData = new FormData();
       formData.append("firstName", firstName);
@@ -39,6 +41,8 @@ const Signup = () => {
       alert("User Entry Saved in Database");
     } catch (error) {
       console.log("Failed to Register User: ", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -206,8 +210,12 @@ const Signup = () => {
           </label>
         </div>
 
-        <button className="rounded-lg bg-blue-500 px-5 py-2 font-bold text-white hover:bg-blue-600">
-          Register
+         <button
+          className="rounded-lg bg-blue-500 px-5 py-2 font-bold text-white hover:bg-blue-600 disabled:opacity-60"
+          type="submit"
+          disabled={loading}
+        >
+          {loading ? "Logging in..." : "Log In"}
         </button>
         <div className="text-sm">
           Already have an account?{" "}
