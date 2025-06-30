@@ -14,11 +14,11 @@ const Signup = () => {
   const [userName, setuserName] = useState("");
   const [userPassword, setuserPassword] = useState("");
   const [userMobile, setuserMobile] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); // ✅ simple loading state
 
   const registerUser = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoading(true); // ✅ start loading
     try {
       const formData = new FormData();
       formData.append("firstName", firstName);
@@ -41,12 +41,12 @@ const Signup = () => {
       );
 
       console.log("Data: ", result);
-      alert("User registered successfully!");
+      toast.success("User registered successfully!");
     } catch (error) {
       console.log("Failed to Register User: ", error);
       toast.error("Registration failed.");
     } finally {
-      setLoading(false);
+      setLoading(false); // ✅ stop loading
     }
   };
 
@@ -58,15 +58,14 @@ const Signup = () => {
       >
         <h1 className="text-2xl font-black">Register</h1>
 
-        {/* -- All your input fields remain unchanged -- */}
+        {/* rest of your form fields (unchanged) */}
 
-        {/* Submit Button */}
         <button
           className="rounded-lg bg-blue-500 px-5 py-2 font-bold text-white hover:bg-blue-600 disabled:opacity-60"
           type="submit"
-          disabled={loading}
+          disabled={loading} // ✅ disable during loading
         >
-          {loading ? "Registering..." : "Register"}
+          {loading ? "Registering..." : "Register"} {/* ✅ show loading text */}
         </button>
 
         {loading && (
