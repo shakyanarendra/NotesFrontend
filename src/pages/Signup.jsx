@@ -39,7 +39,7 @@ const Signup = () => {
           },
         }
       );
-
+     alert("user registered successfully");
       console.log("Data: ", result);
     } catch (error) {
       console.log("Failed to Register User: ", error);
