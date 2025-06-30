@@ -10,6 +10,8 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
@@ -33,10 +35,11 @@ const App = () => {
             </>
           )}
           <Route path="/about" element={<About />} />
-
           <Route path="/faq" element={<Faq />} />
         </Routes>
       </Router>
+
+      <ToastContainer position="top-center" autoClose={3000} />
     </>
   );
 };
