@@ -41,7 +41,6 @@ const Signup = () => {
       );
 
       console.log("Data: ", result);
-      toast.success("User registered successfully!");
     } catch (error) {
       console.log("Failed to Register User: ", error);
       toast.error("Registration failed.");
