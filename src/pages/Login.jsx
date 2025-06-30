@@ -90,10 +90,6 @@ const Login = () => {
           {loading ? "Logging in..." : "Log In"}
         </button>
 
-        {loading && (
-          <p className="text-center text-sm text-gray-500">Please wait...</p>
-        )}
-
         <div className="flex items-center justify-between text-sm">
           <p>New to FindMyNotes?</p>
           <Link to="/signup">
