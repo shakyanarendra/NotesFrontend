@@ -31,7 +31,6 @@ const Login = () => {
 
       if (result.data.status === "Error") {
         toast.error("Wrong credentials");
-        alert("Wrong credentials. Please try again.");
         navigate("/login");
       } else {
         dispatch(setUserData(result.data));
