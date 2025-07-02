@@ -2,53 +2,52 @@ import React from "react";
 
 const Faq = () => {
   const faqs = [
-    {
-      question: "What is Search My Notes?",
-      answer:
-        "Search My Notes is an online platform that enables college students to share and access educational resources. Users can upload and download various study materials, including notes, presentations, and guides.",
-    },
-    {
-      question: "How can I begin using Search My Notes?",
-      answer:
-        "To begin, simply sign up for an account on our platform. After registering, you can start uploading your own study materials or browse resources shared by fellow students.",
-    },
-    {
-      question: "Is there a cost associated with using Search My Notes?",
-      answer:
-        "No, Search My Notes is completely free to use. We are committed to making education accessible to everyone, and our platform is available to all students without any subscription fees.",
-    },
-    {
-      question: "Are my uploaded documents safe on Search My Notes?",
-      answer:
-        "Definitely. We take the security and privacy of your documents seriously. Search My Notes utilizes advanced encryption and security protocols to safeguard the confidentiality of your uploaded materials.",
-    },
-    {
-      question: "What types of documents can I upload on Search My Notes?",
-      answer:
-        "You can upload various document formats, including PDFs, Word files, PowerPoint presentations, and more. Our platform is designed to support a wide range of study materials.",
-    },
-    {
-      question: "How can I find specific study materials on Search My Notes?",
-      answer:
-        "Utilize the search bar on the platform to locate specific study materials. You can enter keywords, subjects, or topics to quickly find relevant documents.",
-    },
-    {
-      question:
-        "Can I work collaboratively with other students on projects through Search My Notes?",
-      answer:
-        "Yes, absolutely! Search My Notes provides real-time collaboration tools that enable you to work on group projects and assignments with your classmates. You can share, edit, and collaborate effortlessly.",
-    },
-    {
-      question: "Is there a limit to how large the files I can upload are?",
-      answer:
-        "Currently, there is a limit on the file size for uploads. Please consult the platform's guidelines for specific information regarding file size restrictions.",
-    },
-    {
-      question: "How can I give feedback on a document?",
-      answer:
-        "Every document on Search My Notes features a feedback and rating section. You can express your opinions, ask questions, or provide feedback regarding the quality of the material.",
-    },
-  ];
+  {
+    question: "What is this Notes App?",
+    answer:
+      "Our Notes App is a user-friendly platform designed to help students and professionals organize, upload, and access notes anytime, anywhere."
+  },
+  {
+    question: "How do I start using the Notes App?",
+    answer:
+      "Simply sign up for a free account. Once registered, you can upload your own notes, browse notes uploaded by others, and manage your profile."
+  },
+  {
+    question: "Can anyone access the notes, or are they private?",
+    answer:
+      "Notes uploaded on the platform are accessible to all users. This ensures that students and professionals can benefit from shared resources, regardless of who uploaded them."
+  },
+  {
+    question: "Is there a search feature to quickly find notes?",
+    answer:
+      "Yes, our powerful search bar allows you to easily find notes by entering keywords, subjects, or topics."
+  },
+  {
+    question: "What kind of documents can I upload?",
+    answer:
+      "You can upload a variety of formats such as PDF, Word, and presentation files. The platform is built to support common document types used for study and work."
+  },
+  {
+    question: "What information is available in the Profile section?",
+    answer:
+      "In the Profile section, you can view your personal details, see how many notes you've uploaded, and manage your uploaded documents."
+  },
+  {
+    question: "Is this Notes App free to use?",
+    answer:
+      "Yes, the Notes App is completely free for all users. We aim to make educational resources accessible to everyone."
+  },
+  {
+    question: "Are my documents safe on the platform?",
+    answer:
+      "We prioritize the security and privacy of your documents. Uploaded files are stored securely, and your personal data is protected."
+  },
+  {
+    question: "Can I use this Notes App for both personal and professional purposes?",
+    answer:
+      "Absolutely! Whether you're a student, educator, or working professional, the Notes App helps you organize your ideas and share resources effectively."
+  }
+];
 
   return (
     <div className="grid place-content-center lg:h-heightWithoutNavbar">
