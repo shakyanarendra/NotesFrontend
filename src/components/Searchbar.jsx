@@ -75,24 +75,27 @@ const Searchbar = () => {
 
       <div className="mt-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {searchStatus === "Found" &&
-          searchResults.length > 0 &&
-          searchResults.map((notes) => (
-            <div
-              key={notes._id}
-              className="flex w-full max-w-[300px] flex-wrap-reverse items-center justify-between rounded-xl bg-[#374151] bg-gray-500 px-3 py-2 text-white shadow-lg"
-            >
-              <p className="mt-2 text-sm">
-                <span className="font-bold">File name: </span>
-                <span>{notes.fileName} </span>
-              </p>
-              <button
-                className="rounded-xl"
-                onClick={() => showPDF(notes.files)}
-              >
-                <FaDownload />
-              </button>
-            </div>
-          ))}
+  searchResults.length > 0 &&
+  searchResults.map((notes) => (
+    <div
+      key={notes._id}
+      className="flex w-full max-w-[320px] items-center justify-between rounded-lg border border-gray-700 bg-[#111827] px-4 py-3 text-white shadow-sm hover:shadow-md transition-shadow duration-200"
+    >
+      <div className="flex-1">
+        <p className="text-sm font-medium truncate">
+          <span className="font-semibold text-gray-300">File:</span> {notes.fileName}
+        </p>
+      </div>
+
+      <button
+        className="ml-3 flex h-8 w-8 items-center justify-center rounded-md border border-gray-600 bg-[#1f2937] hover:bg-[#374151] transition"
+        onClick={() => showPDF(notes.files)}
+      >
+        <FaDownload className="text-white text-sm" />
+      </button>
+    </div>
+  ))}
+
 
         {searchStatus === "Not-Found" && (
           <div className="mt-4 text-center text-gray-600 dark:text-gray-400">
