@@ -61,13 +61,17 @@ const Profile = () => {
         <div className="grid grid-cols-1 gap-5 p-4 sm:grid-cols-2 md:grid-cols-3">
           {userFiles.map((file) => (
             <a
-              href={`https://mernbackend-1-04ze.onrender.com/files/${file.files}`}
-              key={file._id}
-              className="mb-3 flex h-[35px] max-w-[250px] items-center justify-between gap-10 rounded-xl border border-black bg-gray-500 px-4"
-              target="_blank"
-            >
-              <p className="font-semibold"> File: {file.fileName} </p>
-            </a>
+  href={`http://localhost:6969/files/${file.files}`}
+  key={file._id}
+  className="group relative mb-3 flex h-[45px] max-w-[280px] items-center justify-between rounded-xl border border-gray-400 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-5 text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl"
+  target="_blank"
+>
+  <p className="font-semibold truncate">📄 {file.fileName}</p>
+  <span className="material-icons text-white opacity-80 transition group-hover:opacity-100">
+    download
+  </span>
+</a>
+
           ))}
         </div>
       </div>
