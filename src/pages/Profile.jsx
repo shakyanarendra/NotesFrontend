@@ -60,17 +60,18 @@ const Profile = () => {
         <h1 className="mb-3 text-xl font-black">My Documents :</h1>
         <div className="grid grid-cols-1 gap-5 p-4 sm:grid-cols-2 md:grid-cols-3">
           {userFiles.map((file) => (
-            <a
+           <a
   href={`http://localhost:6969/files/${file.files}`}
   key={file._id}
-  className="group relative mb-3 flex h-[45px] max-w-[280px] items-center justify-between rounded-xl border border-gray-400 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-5 text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl"
+  className="group relative mb-3 flex h-[45px] max-w-[280px] items-center justify-between rounded-lg border border-gray-700 bg-[#111827] px-5 text-white shadow-sm transition-all duration-300 hover:shadow-md"
   target="_blank"
 >
-  <p className="font-semibold truncate">📄 {file.fileName}</p>
-  <span className="material-icons text-white opacity-80 transition group-hover:opacity-100">
+  <p className="truncate font-medium">📄 {file.fileName}</p>
+  <span className="material-icons text-white text-base opacity-80 transition-opacity duration-200 group-hover:opacity-100">
     download
   </span>
 </a>
+
 
           ))}
         </div>
